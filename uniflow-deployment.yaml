@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uniflow-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: uniflow
+  template:
+    metadata:
+      labels:
+        app: uniflow
+    spec:
+      containers:
+      - name: uniflow
+        image: yizheng98/uniflow-notebook:latest
+        ports:
+        - containerPort: 8888
+

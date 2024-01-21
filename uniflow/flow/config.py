@@ -213,6 +213,17 @@ class TransformCopyConfig(TransformConfig):
         default_factory=lambda: PromptTemplate(instruction="", few_shot_prompt=[])
     )
     model_config: ModelConfig = field(default_factory=lambda: {})
+    num_thread: int = 1
+
+@dataclass
+class ExpandReduceConfig(TransformConfig):
+    """Transform Linear Config Class."""
+
+    flow_name: str = "ExpandReduceFlow"
+    prompt_template: PromptTemplate = field(
+        default_factory=lambda: PromptTemplate(instruction="", few_shot_prompt=[])
+    )
+    model_config: ModelConfig = field(default_factory=lambda: {})
 
 
 @dataclass

@@ -214,10 +214,12 @@ class TransformServer:
         Returns:
             List[Mapping[str, Any]]: List of outputs from the flow
         """
+        print(input_list)
         batch_data = self._divide_data_into_batches(input_list)
+        print(batch_data)
         with futures.ThreadPoolExecutor(max_workers=self._num_thread) as executor:
             output_futures = {
-                executor.submit(self._run_flow_wrapper, input_data, i): i
+                executor.submit(self._run_flow_wrapper, input_data[0], i): i
                 for i, input_data in enumerate(batch_data)
             }
             # use batch_data size to initialize results
