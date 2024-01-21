@@ -183,7 +183,7 @@ spec:
         image: username/uniflow-notebook:latest  
         ports:
       - containerPort: 8888  
-    ```
+```
     
 Create `uniflow-service.yaml' and the configuration is shown as below:
 ```bash
