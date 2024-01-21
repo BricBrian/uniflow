@@ -26,7 +26,7 @@
 *Response*:
 ```json
 {
-    "job_id": <job_id>,
+    "job_id": “*************”,
     "message": "Job started successfully"
 }
 ```
@@ -48,10 +48,10 @@
 *Response*:
 ```json
 {
-    "job_id": <job_id>,
+    "job_id": “*************”,
     "status": "completed"
 }
-        ```
+```
         
 ## 3. Query ExpandReduceFlow Job Results
 
